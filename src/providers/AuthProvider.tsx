@@ -2,7 +2,7 @@ import {addDoc, collection} from '@firebase/firestore';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import React, {createContext, FC, useEffect, useMemo, useState} from 'react';
 import {Alert} from 'react-native';
-import {auth, db, login, logout, register} from './firebase';
+import {auth, db, login, logout, register} from '../firebase';
 
 interface IContext {
   user: User | null;
