@@ -6,7 +6,7 @@ interface ILayout {
   isScrollView?: boolean;
 }
 
-const Layout: FC<ILayout> = ({children, isScrollView = true}) => {
+export const Layout: FC<ILayout> = ({children, isScrollView = true}) => {
   return (
     <View style={StyleCenter}>
       {isScrollView ? <ScrollView>{children}</ScrollView> : children}
