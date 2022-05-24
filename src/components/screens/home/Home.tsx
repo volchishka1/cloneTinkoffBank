@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {Text, View} from 'react-native';
-import { Header } from './Header';
+import {Header} from './Header';
 
 export const Home: FC = () => {
   return (

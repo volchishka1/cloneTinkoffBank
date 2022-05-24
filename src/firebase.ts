@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from 'firebase/auth';
-import {getFirestore} from '@firebase/firestore';
+import {getFirestore} from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDg3gIjCL3Yj0OKfe4N5FV4zGlcNzes6Bk',

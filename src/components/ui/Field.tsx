@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Keyboard, StyleSheet, TextInput} from 'react-native';
+import {StyleSheet, TextInput} from 'react-native';
 
 interface IField {
   onChange: (val: string) => void;

@@ -1,4 +1,4 @@
-import {addDoc, collection} from '@firebase/firestore';
+import {addDoc, collection} from 'firebase/firestore';
 import {onAuthStateChanged, User} from 'firebase/auth';
 import React, {createContext, FC, useEffect, useMemo, useState} from 'react';
 import {Alert} from 'react-native';

@@ -1,7 +1,6 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import {useAuth} from '../../../hooks/useAuth';
-import {limit, onSnapshot, query, where} from 'firebase/firestore';
-import {collection} from '@firebase/firestore';
+import {limit, onSnapshot, query, where, collection} from 'firebase/firestore';
 import {db} from '../../../firebase';
 
 interface IProfile {
@@ -22,6 +21,7 @@ export const useProfile = () => {
       onSnapshot(
         query(collection(db, 'users'), where('_id', '==', user?.uid), limit(1)),
         snapshot => {
+          // eslint-disable-next-line @typescript-eslint/no-shadow
           const profile = snapshot.docs.map(d => ({
             ...(d.data() as Omit<IProfile, 'docId'>),
             docId: d.id,
@@ -41,7 +41,7 @@ export const useProfile = () => {
       name,
       setName,
     }),
-    [],
+    [isLoading, name, profile],
   );
 
   return value;
