@@ -8,16 +8,15 @@ import {
 import {getFirestore} from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDg3gIjCL3Yj0OKfe4N5FV4zGlcNzes6Bk',
-  authDomain: 'copytinkoffbank.firebaseapp.com',
-  projectId: 'copytinkoffbank',
-  storageBucket: 'copytinkoffbank.appspot.com',
-  messagingSenderId: '122437025118',
-  appId: '1:122437025118:web:fb60359f365cd77a77a3cf',
+  apiKey: 'AIzaSyCk1ruKaOUY_-ti3vi0LHzKDhxp4XrZ8pk',
+  authDomain: 'clonetinkoffbank.firebaseapp.com',
+  projectId: 'clonetinkoffbank',
+  storageBucket: 'clonetinkoffbank.appspot.com',
+  messagingSenderId: '173494832685',
+  appId: '1:173494832685:web:55920692180ad478b332a4',
 };
 
-initializeApp(firebaseConfig);
-
+const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
 export const register = (email: string, password: string) => {
@@ -30,4 +29,4 @@ export const login = (email: string, password: string) => {
 
 export const logout = () => signOut(auth);
 
-export const db = getFirestore();
+export const db = getFirestore(app);

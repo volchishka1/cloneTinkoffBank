@@ -29,7 +29,7 @@ export const AuthProvider: FC = ({children}) => {
         displayName: 'No name',
       });
     } catch (error: any) {
-      Alert.alert('Error reg:', error);
+      Alert.alert('Error reg:', error.message);
     } finally {
       setIsLoading(false);
     }
