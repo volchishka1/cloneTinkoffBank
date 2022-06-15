@@ -6,9 +6,10 @@ import {TypeRootStackParamList} from '../../../navigation/types';
 
 interface IFooter {
   navigate: (screenName: keyof TypeRootStackParamList) => void;
+  currentRoute: string;
 }
 
-export const Footer: FC<IFooter> = ({navigate}) => {
+export const Footer: FC<IFooter> = ({navigate, currentRoute}) => {
   return (
     <Padding
       style={{
@@ -25,7 +26,12 @@ export const Footer: FC<IFooter> = ({navigate}) => {
         borderTopWidth: 1,
       }}>
       {menu.map(item => (
-        <NavItem key={item.title} item={item} navigate={navigate} />
+        <NavItem
+          key={item.title}
+          item={item}
+          navigate={navigate}
+          currentRoute={currentRoute}
+        />
       ))}
     </Padding>
   );
