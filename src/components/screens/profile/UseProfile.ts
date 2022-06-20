@@ -3,7 +3,7 @@ import {useAuth} from '../../../hooks/useAuth';
 import {limit, onSnapshot, query, where, collection} from 'firebase/firestore';
 import {db} from '../../../firebase';
 
-interface IProfile {
+export interface IProfile {
   _id: string;
   displayName: string;
   docId: string;

@@ -15,6 +15,10 @@ export const NavItem: FC<NavItem> = ({item, navigate, currentRoute}) => {
     <Pressable
       style={{alignItems: 'center', width: '20%'}}
       onPress={() => navigate(item.title)}>
+      {/*<FontAwesomeIcon*/}
+      {/*  icon={item.iconName}*/}
+      {/*  style={isActive ? {marginTop: 1, color: 'blue'} : {marginTop: 1}}*/}
+      {/*/>*/}
       <Text
         style={
           isActive

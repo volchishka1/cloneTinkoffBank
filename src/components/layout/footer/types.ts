@@ -1,6 +1,6 @@
 import {TypeRootStackParamList} from '../../../navigation/types';
 
 export interface IFooterItem {
-  // iconName: ,
+  iconName: ;
   title: keyof TypeRootStackParamList;
 }

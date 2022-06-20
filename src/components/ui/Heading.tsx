@@ -1,26 +1,32 @@
 import React, {FC} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {Text} from 'react-native';
 import {Padding} from './Padding';
 
 export const Heading: FC<{text: string; isCenter?: boolean}> = ({
   text,
-  // isCenter = false,
+  isCenter = false,
 }) => {
   return (
     <Padding>
       <Text
-        style={styles.heading}
-        // isCenter ? alighItems: 'center' : ''
-      >
+        style={
+          isCenter
+            ? {
+                fontWeight: '700',
+                color: '#0f0d0d',
+                paddingTop: 50,
+                fontSize: 30,
+                alignItems: 'center',
+              }
+            : {
+                fontWeight: '700',
+                color: '#0f0d0d',
+                paddingTop: 50,
+                fontSize: 30,
+              }
+        }>
         {text}
       </Text>
     </Padding>
   );
 };
-
-const styles = StyleSheet.create({
-  heading: {
-    fontWeight: '700',
-    color: '#0f0d0d',
-  },
-});
