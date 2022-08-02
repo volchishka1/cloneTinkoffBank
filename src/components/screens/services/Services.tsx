@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import {Text, View} from 'react-native';
 import {Layout} from '../../layout/Layout';
+import {services} from './data';
+import {ServiceItem} from './item/ServiceItem';
 
 export const Services: FC = () => {
   return (
@@ -14,6 +16,16 @@ export const Services: FC = () => {
         }}>
         Minsk
       </Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}>
+        {services.map(service => (
+          <ServiceItem key={service.title} service={service} />
+        ))}
+      </View>
     </Layout>
   );
 };

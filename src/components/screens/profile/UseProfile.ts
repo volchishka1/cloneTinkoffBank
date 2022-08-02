@@ -21,7 +21,6 @@ export const useProfile = () => {
       onSnapshot(
         query(collection(db, 'users'), where('_id', '==', user?.uid), limit(1)),
         snapshot => {
-          // eslint-disable-next-line @typescript-eslint/no-shadow
           const profile = snapshot.docs.map(d => ({
             ...(d.data() as Omit<IProfile, 'docId'>),
             docId: d.id,
